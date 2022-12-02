@@ -1,0 +1,60 @@
+/* BASE */
+
+body,
+body * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #ccc;
+}
+
+img {
+  width: 100%;
+  display: inline-block;
+}
+
+.container {
+  width: 90%;
+  margin: 50px auto;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px 20px;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.btn {
+  padding: 10px 25px;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  background-color: rgb(28, 185, 185);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all ease-out 0.25s;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn:active {
+  transform: scale(0.85);
+}
+
+.title {
+  text-transform: uppercase;
+}
