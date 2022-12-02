@@ -1,4 +1,5 @@
 export default function Joke(data) {
+  // Destructure data
   const { type, joke, setup, delivery } = data;
   return (
     <article className="joke flex flex-column">

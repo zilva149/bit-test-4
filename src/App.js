@@ -2,10 +2,11 @@ import { useState, useEffect } from "react";
 import Joke from "./components/Joke";
 
 export default function App() {
+  // States
   const [jokes, setJokes] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
-
+  // Fetch function
   const fetchUsers = async (url) => {
     try {
       const resp = await fetch(url);
@@ -21,11 +22,12 @@ export default function App() {
       console.error(err);
     }
   };
-
+  // Fetch data on initial render
   useEffect(() => {
     fetchUsers("https://v2.jokeapi.dev/joke/Programming?amount=10");
   }, []);
 
+  // Display loading message while fething
   if (isLoading) {
     return (
       <main className="container flex">
@@ -33,7 +35,7 @@ export default function App() {
       </main>
     );
   }
-
+  // Display error message when failed
   if (isError) {
     return (
       <main className="container flex">
@@ -41,7 +43,7 @@ export default function App() {
       </main>
     );
   }
-
+  // Display fetched data on success
   return (
     <main className="container flex flex-column">
       <h1 className="title">jokes</h1>
